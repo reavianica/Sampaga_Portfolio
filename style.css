@@ -1,0 +1,412 @@
+:root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --text: #e6edf3;
+    --muted: #9da7b3;
+    --accent: #58a6ff;
+}
+
+body.light {
+    --bg: #f5f7fa;
+    --card: #ffffff;
+    --text: #1f2328;
+    --muted: #6b7280;
+    --accent: #2563eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s ease;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 20px;
+    flex: 1 0 auto;
+}
+
+/* Ensure the main resume container fills remaining height so footer sits at bottom */
+#resume-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--card);
+    padding: 25px;
+    border-radius: 16px;
+}
+
+.profile-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.profile-info h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.location {
+    color: var(--muted);
+    margin: 6px 0;
+}
+
+.location i {
+    margin-right: 6px;
+}
+
+.actions {
+    margin-top: 12px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.toggle {
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Theme switch (sliding) */
+.theme-switch {
+    margin-left: auto;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+    position: relative;
+}
+
+.theme-switch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-slider {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.04);
+    border-radius: 999px;
+    transition: background 0.2s ease;
+}
+
+.switch-slider {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.04);
+    border-radius: 999px;
+    transition: background 0.2s ease;
+}
+
+.theme-switch input:checked + .switch-slider {
+    background: var(--accent);
+}
+
+/* The circular knob that moves (knob background adapts to theme) */
+.switch-slider .switch-knob {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--card);
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.theme-switch input:checked + .switch-slider .switch-knob {
+    transform: translateY(-50%) translateX(24px);
+}
+
+/* icons inside the knob only; end icons hidden */
+.switch-knob i {
+    font-size: 12px;
+    position: absolute;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.knob-sun {
+    color: #FFD54F;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.knob-moon {
+    color: var(--text);
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Toggle which icon is visible depending on checked state (checked = light mode) */
+.theme-switch input:checked + .switch-slider .knob-sun {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.theme-switch input:checked + .switch-slider .knob-moon {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* hide the decorative end icons (we only show the knob icon) */
+.switch-slider .icon { display: none; }
+
+/* Fallback: respect `body.light` class in case checkbox and body get out of sync */
+body.light .theme-switch .knob-sun {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+body.light .theme-switch .knob-moon {
+    opacity: 0 !important;
+    transform: scale(0.8) !important;
+}
+
+body:not(.light) .theme-switch .knob-sun {
+    opacity: 0 !important;
+    transform: scale(0.8) !important;
+}
+
+body:not(.light) .theme-switch .knob-moon {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.left-col,
+.right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: var(--card);
+    padding: 22px;
+    border-radius: 16px;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+/* Justify About card paragraph and keep last line left-aligned */
+.left-col .card:first-child p {
+    text-align: justify;
+    text-align-last: left;
+}
+
+.experience-item {
+    margin-bottom: 14px;
+}
+
+.experience-item strong {
+    display: block;
+    font-size: 14px;
+}
+
+.experience-item span {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* Layout for experience items: title/company on left, date on right */
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.experience-item .exp-main {
+    min-width: 0;
+}
+
+.experience-item .company {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.exp-date {
+    color: var(--muted);
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .experience-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .exp-date {
+        margin-top: 6px;
+    }
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--text);
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    transition: 0.2s ease;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 20px;
+    flex: 1 0 auto;
+}
+.footer {
+    position: relative;
+    padding: 25px 0;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    background: var(--card);
+    color: var(--muted);
+    text-align: center;
+    font-size: 14px;
+    border-radius: 0;
+    margin-top: 40px;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cert-link-inline:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+.cert-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-main {
+    font-weight: 600;
+}
+
+.cert-sub-inline {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.social-links a i {
+    font-size: 18px;
+    color: var(--accent);
+}
+
+.social-links a:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+.social-links a:hover i {
+    color: #fff;
+}
+
+.cert-item {
+    margin-bottom: 14px;
+}
+
+.cert-item strong {
+    display: block;
+    font-size: 14px;
+}
+
+.cert-item span {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .toggle {
+        margin-top: 10px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
