@@ -1,188 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rea Vianica Sampaga | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="profile.jpg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rea Vianica Sampaga</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container" id="resume-content">
+<nav>
+  <div class="nav-links">
+    <a href="#education">Education</a>
+    <a href="#experience" class="active">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+  </div>
+</nav>
 
-    <!-- Profile Header -->
-    <div class="profile-card">
-        <img src="profile.jpg" alt="Rea Vianica Sampaga">
+<!-- HERO -->
+<section style="position:relative;overflow:hidden;background:var(--bg);transition:background .3s;">
+  <div class="hero-blob"></div>
+  <div class="blob-sm" style="width:200px;height:200px;left:10%;top:60%;"></div>
+  <div class="hero" id="home">
+    <div class="hero-left">
+      <h1>Hello, I'm<br><span style="color:var(--blue);">Rea Vianica Sampaga</span></h1>
+      <p class="hero-desc">
+        A 4th-year Bachelor of Science in Information Technology with specialization in Web and Mobile Application student at FEU Diliman.
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="SAMPAGA_RESUME.pdf" target="_blank">View Resume</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.facebook.com/reasampaga" target="_blank" class="hero-social-btn fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/reavianica/" target="_blank" class="hero-social-btn ig" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/reavianica/" target="_blank" class="hero-social-btn li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/reavianica" target="_blank" class="hero-social-btn gh" title="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-wrap">
+        <img src="profile.jpg" alt="Rea Vianica Sampaga" class="hero-profile-img">
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="profile-info">
-            <h1>Rea Vianica C. Sampaga</h1>
-            <div class="location">
-                <i class="fas fa-location-dot"></i> Rodriguez, Rizal
+<!-- ALL CONTENT IN ONE SECTION -->
+<section class="exp-section">
+  <div class="section-wrap">
+    <div class="exp-section-inner">
+
+      <!-- EDUCATION -->
+      <div class="reveal" id="education">
+        <div class="eyebrow">Education</div>
+        <div class="edu-card">
+          <div class="edu-timeline">
+            <div class="edu-item">
+              <div class="edu-line-wrap"><div class="edu-dot"></div></div>
+              <div class="edu-item-body">
+                <div class="edu-degree">Bachelor of Science in Information Technology with specialization in Web and Mobile Applications</div>
+                <div class="edu-school">FEU Diliman</div>
+                <div class="edu-date">S.Y. 2022 &ndash; 2026</div>
+              </div>
             </div>
-
-            <div class="actions">
-                <a class="btn" href="SAMPAGA_RESUME.pdf" target="_blank">
-                    <i class="fas fa-file-alt"></i> View Resume
-                </a>
+            <div class="edu-item">
+              <div class="edu-line-wrap"><div class="edu-dot"></div></div>
+              <div class="edu-item-body">
+                <div class="edu-degree">Science, Technology, Engineering, and Mathematics</div>
+                <div class="edu-school">Virgen Del Pilar School</div>
+                <div class="edu-date">S.Y. 2020 &ndash; 2022</div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <label class="theme-switch" for="themeToggle">
-            <input type="checkbox" id="themeToggle" aria-label="Toggle theme">
-            <span class="switch-slider" aria-hidden="true">
-                <span class="icon sun"><i class="fas fa-sun"></i></span>
-                <span class="icon moon"><i class="fas fa-moon"></i></span>
-                <span class="switch-knob" aria-hidden="true">
-                    <i class="fas fa-sun knob-sun"></i>
-                    <i class="fas fa-moon knob-moon"></i>
-                </span>
-            </span>
-        </label>
-    </div>
-
-    <div class="grid">
-        <div class="left-col">
-            <!-- About -->
-            <div class="card">
-                <h2><i class="fas fa-user"></i> About</h2>
-                <p>
-                    I am Rea Vianica C. Sampaga, a 4th-year BSIT student at FEU Diliman with specialization in Web and Mobile Applications.
-                    Since my first year, I have consistently excelled academically, earning recognition as a Top Performing Student
-                    and recently ranking 1st in FEU Diliman BSIT-WMA in the Annual Student Recognition 2025.
-                    <br><br>
-                    Beyond academics, I am a passionate student leader, having served two consecutive years as an executive officer
-                    in the Tertiary Student Coordinating Council and holding a national officership with the Philippine Association
-                    of Campus Student Advisers. I also take on leadership roles in group projects as the Project Manager of our
-                    Capstone Project and Design Thinking Competition.
-                </p>
+      <!-- EXPERIENCE -->
+      <div class="reveal" id="experience" style="transition-delay:.04s;">
+        <div class="eyebrow">Experience</div>
+        <div class="edu-card">
+          <div class="edu-timeline">
+            <div class="edu-item">
+              <div class="edu-line-wrap"><div class="edu-dot"></div></div>
+              <div class="edu-item-body">
+                <div class="edu-degree">Automation Developer Intern</div>
+                <div class="edu-school">Reed Elsevier Philippines</div>
+                <div class="edu-date">Jan 2026 &ndash; Present &nbsp;&middot;&nbsp; <span style="color:#16a34a;font-weight:600;">Currently active</span></div>
+              </div>
             </div>
-
-            <!-- Experience -->
-            <div class="card">
-                <h2><i class="fas fa-briefcase"></i> Experience</h2>
-
-                <div class="experience-item">
-                    <div class="exp-main">
-                        <strong>Automation Developer Intern</strong>
-                        <span class="company">Reed Elsevier Philippines</span>
-                    </div>
-                    <div class="exp-date">January 2026 - Present</div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-main">
-                        <strong>Project Manager – Capstone Project</strong>
-                        <span class="company">FEU Diliman</span>
-                    </div>
-                    <div class="exp-date">September 2024 - November 2025</div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-main">
-                        <strong>UI & UX Designer – Technopreneurship</strong>
-                        <span class="company">FEU Diliman</span>
-                    </div>
-                    <div class="exp-date">April 2024 - July 2024</div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-main">
-                        <strong>Project Manager – Design Thinking</strong>
-                        <span class="company">FEU Diliman</span>
-                    </div>
-                    <div class="exp-date">January 2024 - April 2024</div>
-                </div>
+            <div class="edu-item">
+              <div class="edu-line-wrap"><div class="edu-dot"></div></div>
+              <div class="edu-item-body">
+                <div class="edu-degree">Project Manager &ndash; Capstone Project</div>
+                <div class="edu-school">FEU Diliman</div>
+                <div class="edu-date">Sep 2024 &ndash; Nov 2025</div>
+              </div>
             </div>
+            <div class="edu-item">
+              <div class="edu-line-wrap"><div class="edu-dot"></div></div>
+              <div class="edu-item-body">
+                <div class="edu-degree">UI &amp; UX Designer &ndash; Technopreneurship</div>
+                <div class="edu-school">FEU Diliman</div>
+                <div class="edu-date">Apr &ndash; Jul 2024</div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-line-wrap"><div class="edu-dot"></div></div>
+              <div class="edu-item-body">
+                <div class="edu-degree">Project Manager &ndash; Design Thinking</div>
+                <div class="edu-school">FEU Diliman</div>
+                <div class="edu-date">Jan &ndash; Apr 2024</div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="right-col">
-            <!-- Socials -->
-            <div class="card">
-                <h2><i class="fas fa-share-nodes"></i> Socials</h2>
-
-                <div class="social-links">
-                    <a href="https://www.facebook.com/reasampaga" target="_blank">
-                        <i class="fab fa-facebook"></i> Facebook
-                    </a>
-
-                    <a href="https://www.instagram.com/reavianica/" target="_blank">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/reavianica/" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-
-                    <a href="https://github.com/reavianica" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
+      <!-- SKILLS -->
+      <div class="reveal" id="skills" style="transition-delay:.08s;">
+        <div class="eyebrow">Skills</div>
+        <div class="skills-grid">
+          <div class="skills-card">
+            <div class="skills-card-title">Programming Languages</div>
+            <div class="skills-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">SQL</span>
             </div>
-
-<!-- Certifications -->
-            <div class="card">
-                <h2><i class="fas fa-certificate"></i> Certifications</h2>
-
-                <div class="social-links cert-links">
-                    <div class="cert-entry">
-                        <a class="cert-link-inline" href="https://www.credly.com/earner/earned/badge/4827802d-b649-4548-abf2-b947c46c3e68" target="_blank">
-                            <i class="fas fa-award"></i>
-                            <div class="cert-content">
-                                <div class="cert-main">IT Specialist - Python</div>
-                                <div class="cert-sub-inline">Certiport — A Pearson VUE business</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="cert-entry">
-                        <a class="cert-link-inline" href="https://www.credly.com/earner/earned/badge/d4814176-ce09-4f46-9037-4c94dcb3cd80" target="_blank">
-                            <i class="fas fa-award"></i>
-                            <div class="cert-content">
-                                <div class="cert-main">IT Specialist - Network Security</div>
-                                <div class="cert-sub-inline">Certiport — A Pearson VUE business</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="cert-entry">
-                        <a class="cert-link-inline" href="https://www.credly.com/earner/earned/badge/d8bf5a9f-688a-431e-a3f8-c6bfeb1f6876" target="_blank">
-                            <i class="fas fa-award"></i>
-                            <div class="cert-content">
-                                <div class="cert-main">IT Specialist - Networking</div>
-                                <div class="cert-sub-inline">Certiport — A Pearson VUE business</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="cert-entry">
-                        <a class="cert-link-inline" href="https://www.credly.com/earner/earned/badge/a25d6f3f-557f-44e2-8e5d-933c8c878e38" target="_blank">
-                            <i class="fas fa-award"></i>
-                            <div class="cert-content">
-                                <div class="cert-main">IT Specialist - HTML and CSS</div>
-                                <div class="cert-sub-inline">Certiport — A Pearson VUE business</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+          </div>
+          <div class="skills-card">
+            <div class="skills-card-title">Frameworks &amp; Libraries</div>
+            <div class="skills-tags">
+              <span class="skill-tag">Next.js</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">Selenium</span>
+              <span class="skill-tag">Pillow</span>
+              <span class="skill-tag">Beautiful Soup</span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="reveal" id="projects" style="transition-delay:.10s;">
+        <div class="eyebrow">Projects</div>
+        <div class="proj-carousel-wrap">
+          <button class="proj-nav-btn" id="projPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+          <div class="proj-track-outer">
+            <div class="proj-track" id="projTrack">
+              <div class="proj-card">
+                <div class="proj-img-wrap"><img alt="Portfolio" id="proj-img-0" src="Portfolio.png" style="display:block;"><input type="file" accept="image/*" onchange="loadProjImg(this,'proj-img-0')"></div>
+                <div class="proj-card-body"><div class="proj-name">Portfolio</div><div class="proj-desc">A personal website where I showcase my projects, skills, certifications, and experiences.</div><div class="proj-tags"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span></div></div>
+              </div>
+              <div class="proj-card">
+                <div class="proj-img-wrap"><img alt="iReport" id="proj-img-1" src="iReport.png" style="display:block;"><input type="file" accept="image/*" onchange="loadProjImg(this,'proj-img-1')"></div>
+                <div class="proj-card-body"><div class="proj-name">iReport</div><div class="proj-desc">A browser-based reporting application where I can submit reports to the QCPD and trusted contacts, call emergency hotlines, and chat with Gemini AI.</div><div class="proj-tags"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span></div></div>
+              </div>
+              <div class="proj-card">
+                <div class="proj-img-wrap"><img alt="FacilitEASE" id="proj-img-2" src="FacilitEASE.png" style="display:block;"><input type="file" accept="image/*" onchange="loadProjImg(this,'proj-img-2')"></div>
+                <div class="proj-card-body"><div class="proj-name">FacilitEASE</div><div class="proj-desc">A web and mobile application for venue and equipment reservations and handling job orders for the FEU Diliman Facilities Office.</div><div class="proj-tags"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">PHP</span><span class="skill-tag">Kotlin</span></div></div>
+              </div>
+              <div class="proj-card">
+                <div class="proj-img-wrap"><img alt="Invoice Tool" id="proj-img-3" src="Invoice.png" style="display:block;"><input type="file" accept="image/*" onchange="loadProjImg(this,'proj-img-3')"></div>
+                <div class="proj-card-body"><div class="proj-name">Invoice Tool</div><div class="proj-desc">A desktop application that generates invoices and creates email messages.</div><div class="proj-tags"><span class="skill-tag">Python</span></div></div>
+              </div>
+              <div class="proj-card">
+                <div class="proj-img-wrap"><img alt="Reporting Tool" id="proj-img-4" src="Reporting.png" style="display:block;"><input type="file" accept="image/*" onchange="loadProjImg(this,'proj-img-4')"></div>
+                <div class="proj-card-body"><div class="proj-name">Reporting Tool</div><div class="proj-desc">A desktop application that generates reports to compute the Average Percentage Score per week and creates email messages.</div><div class="proj-tags"><span class="skill-tag">Python</span></div></div>
+              </div>
+              <div class="proj-card">
+                <div class="proj-img-wrap"><img alt="Webscraping Tool" id="proj-img-5" src="Webscraping.png" style="display:block;"><input type="file" accept="image/*" onchange="loadProjImg(this,'proj-img-5')"></div>
+                <div class="proj-card-body"><div class="proj-name">Webscraping Tool</div><div class="proj-desc">A desktop application that extracts event details and author descriptions from websites.</div><div class="proj-tags"><span class="skill-tag">Python</span></div></div>
+              </div>
+              <div class="proj-card">
+                <div class="proj-img-wrap"><img alt="QR Code Generator" id="proj-img-6" src="QR.png" style="display:block;"><input type="file" accept="image/*" onchange="loadProjImg(this,'proj-img-6')"></div>
+                <div class="proj-card-body"><div class="proj-name">QR Code Generator</div><div class="proj-desc">A desktop application that generates QR codes for various uses.</div><div class="proj-tags"><span class="skill-tag">Python</span></div></div>
+              </div>
+              <div class="proj-card">
+                <div class="proj-img-wrap"><img alt="Online Calculator" id="proj-img-7" src="Calculator.png" style="display:block;"><input type="file" accept="image/*" onchange="loadProjImg(this,'proj-img-7')"></div>
+                <div class="proj-card-body"><div class="proj-name">Online Calculator</div><div class="proj-desc">A website that performs basic mathematical calculations.</div><div class="proj-tags"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span></div></div>
+              </div>
+            </div>
+          </div>
+          <button class="proj-nav-btn" id="projNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="proj-dots" id="projDots"></div>
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="reveal" id="certifications" style="transition-delay:.12s;">
+        <div class="eyebrow">Certifications</div>
+        <div class="cert-badge-grid">
+          <div class="cert-badge-card">
+            <div class="cert-badge-img-wrap">
+              <img alt="Python badge" src="PYTHON.png" style="display:block;">
+            </div>
+            <div class="cert-badge-name">IT Specialist &ndash; Python</div>
+            <div class="cert-badge-issuer">Certiport &middot; Pearson VUE</div>
+          </div>
+          <div class="cert-badge-card">
+            <div class="cert-badge-img-wrap">
+              <img alt="Network Security badge" src="NETWORK_SECURITY.png" style="display:block;">
+            </div>
+            <div class="cert-badge-name">IT Specialist &ndash; Network Security</div>
+            <div class="cert-badge-issuer">Certiport &middot; Pearson VUE</div>
+          </div>
+          <div class="cert-badge-card">
+            <div class="cert-badge-img-wrap">
+              <img alt="Networking badge" src="NETWORKING.png" style="display:block;">
+            </div>
+            <div class="cert-badge-name">IT Specialist &ndash; Networking</div>
+            <div class="cert-badge-issuer">Certiport &middot; Pearson VUE</div>
+          </div>
+          <div class="cert-badge-card">
+            <div class="cert-badge-img-wrap">
+              <img alt="HTML CSS badge" src="HTML&CSS.png" style="display:block;">
+            </div>
+            <div class="cert-badge-name">IT Specialist &ndash; HTML and CSS</div>
+            <div class="cert-badge-issuer">Certiport &middot; Pearson VUE</div>
+          </div>
+        </div>
+      </div>
 
     </div>
-</div>
+  </div>
+</section>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-inner">
-        <p>&copy; 2026 Rea Vianica C. Sampaga. All rights reserved.</p>
-    </div>
+<footer>
+  <p>Rea Vianica Sampaga's Portfolio</p>
 </footer>
 
-<!-- JS -->
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
