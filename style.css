@@ -36,7 +36,12 @@ nav{
   display:flex;align-items:center;
   transition:background .3s,border-color .3s;
 }
-.nav-links{display:flex;gap:28px;}
+.nav-links{
+  display:flex;gap:28px;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
 .nav-links a{font-size:13px;color:var(--muted);text-decoration:none;font-weight:500;transition:color .2s;}
 .nav-links a:hover{color:var(--blue);}
 .nav-links a.active{color:var(--dark);font-weight:600;}
